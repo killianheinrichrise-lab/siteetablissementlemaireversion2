@@ -7,7 +7,7 @@ Usage : python tools/build_pages.py
 
 En tête de chaque page, un bloc de réglages :
   <!--meta {"title": "…", "description": "…", "path": "/gros-oeuvre/", "nav": "services", "svc": "gros-oeuvre"} -->
-puis, facultatifs, <!--slot:head--> … <!--/slot--> et <!--slot:jsonld--> … <!--/slot-->.
+puis, facultatifs, <!--slot:head-->, <!--slot:jsonld--> et <!--slot:scripts--> (chacun fermé par <!--/slot-->).
 Aucune dépendance : bibliothèque standard Python uniquement.
 """
 import json
@@ -59,7 +59,7 @@ def parse_page(raw):
     m = re.match(r"\s*<!--meta\s*(\{.*?\})\s*-->", raw, re.S)
     meta = json.loads(m.group(1))
     rest = raw[m.end():]
-    slots = {"head": "", "jsonld": ""}
+    slots = {"head": "", "jsonld": "", "scripts": ""}
     for name in list(slots):
         sm = re.search(r"<!--slot:%s-->(.*?)<!--/slot-->" % name, rest, re.S)
         if sm:

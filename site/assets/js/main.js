@@ -25,6 +25,7 @@
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
     gsap.ticker.lagSmoothing(0);
+    window.__lenis = lenis;   // utilisé par les scripts propres à une page
   }
 
   function scrollToTarget(target) {

@@ -1,0 +1,248 @@
+<!--meta {
+  "page": "maison",
+  "path": "/maison-cle-en-main-a-fourmies/",
+  "nav": "maison",
+  "svc": "maison-cle-en-main",
+  "title": "Construction maison clé en main à Fourmies | Établissements Lemaire",
+  "description": "Construisez votre maison clé en main à Fourmies. De la conception à la livraison, tout géré par nos équipes. À partir de 165 000 €.",
+  "og_image": "/assets/img/maison-interieur.webp"
+} -->
+
+<!--slot:head-->
+<link rel="modulepreload" href="/assets/vendor/three.core.min.js">
+<link rel="modulepreload" href="/assets/vendor/three.module.min.js">
+<script>
+  // la visite 3D n'est activée que si le navigateur sait l'afficher (sinon : liste statique)
+  (function () {
+    var ok = false;
+    try { var c = document.createElement('canvas'); ok = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
+    if (ok && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('has-visit');
+    // si le script de la visite ne se charge pas, retour à la liste statique
+    setTimeout(function () { if (!window.__visitReady) document.documentElement.classList.remove('has-visit'); }, 6000);
+  })();
+</script>
+<!--/slot-->
+
+<!--slot:jsonld-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://etablissementslemaire.fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Maison clé en main", "item": "https://etablissementslemaire.fr/maison-cle-en-main-a-fourmies/" }
+    ] },
+    { "@type": "Service", "serviceType": "Construction de maison individuelle clé en main", "areaServed": "Fourmies et l’Avesnois",
+      "provider": { "@type": "HomeAndConstructionBusiness", "name": "Établissements Lemaire", "telephone": "+33649266478",
+        "address": { "@type": "PostalAddress", "streetAddress": "45 rue Léo Lagrange", "postalCode": "59610", "addressLocality": "Fourmies", "addressCountry": "FR" } } }
+  ]
+}
+</script>
+<!--/slot-->
+
+<!--slot:scripts-->
+<script type="module" src="/assets/js/maison.js"></script>
+<!--/slot-->
+
+<section class="visit" id="visite" aria-labelledby="page-title">
+  <div class="visit__stage">
+    <canvas class="visit__canvas" aria-hidden="true"></canvas>
+    <div class="visit__veil" aria-hidden="true"></div>
+    <div class="visit__labels" aria-hidden="true"></div>
+
+    <div class="visit__hud">
+      <ol class="visit__stops">
+        <li class="stop stop--hero is-active" data-stop="hero">
+          <nav class="crumbs crumbs--dark" aria-label="Fil d’Ariane">
+            <ol>
+              <li><a href="/">Accueil</a></li>
+              <li><span aria-current="page">Maison clé en main</span></li>
+            </ol>
+          </nav>
+          <h1 class="stop__title stop__title--xl" id="page-title">Votre maison neuve clé en main à Fourmies</h1>
+          <p class="stop__text">De la conception architecturale à la remise des clés, nos équipes gèrent tout.</p>
+          <div class="stop__ctas">
+            <a class="pill pill--solid pill--lg" href="/contact/?projet=maison-cle-en-main" data-soon>Nous contacter</a>
+            <a class="pill pill--ghost pill--lg" href="tel:+33649266478"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>06 49 26 64 78</a>
+          </div>
+          <p class="stop__hint">Construisez la maison étape par étape, puis visitez-la pièce par pièce.</p>
+        </li>
+
+        <li class="stop" data-stop="conception">
+          <p class="stop__index">Notre offre clé en main <span>01 / 04</span></p>
+          <h2 class="stop__title">Conception architecturale</h2>
+          <p class="stop__text">Plan réalisé par notre cabinet partenaire PLB2E, adapté à votre terrain et à vos besoins.</p>
+        </li>
+        <li class="stop" data-stop="construction">
+          <p class="stop__index">Notre offre clé en main <span>02 / 04</span></p>
+          <h2 class="stop__title">Construction complète</h2>
+          <p class="stop__text">Gros œuvre, charpente, toiture, menuiseries&#8239;: tout est réalisé par nos équipes certifiées RGE Qualibat.</p>
+        </li>
+        <li class="stop" data-stop="finitions">
+          <p class="stop__index">Notre offre clé en main <span>03 / 04</span></p>
+          <h2 class="stop__title">Finitions premium</h2>
+          <p class="stop__text">Plâtrerie, peinture, revêtements de sol, cuisine, salle de bain&#8239;: livrée prête à vivre.</p>
+        </li>
+        <li class="stop" data-stop="cles">
+          <p class="stop__index">Notre offre clé en main <span>04 / 04</span></p>
+          <h2 class="stop__title">Remise des clés</h2>
+          <p class="stop__text">Suivi de chantier complet jusqu’à la livraison finale, avec service après-vente.</p>
+        </li>
+
+        <li class="stop stop--room" data-stop="room" data-room="entree" data-area="15.98">
+          <p class="stop__index">La visite <span>01 / 10</span></p>
+          <h2 class="stop__title">Entrée</h2>
+          <p class="stop__area"><span class="stop__num">15,98</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="sejour" data-area="38.89" data-photo="1">
+          <p class="stop__index">La visite <span>02 / 10</span></p>
+          <h2 class="stop__title">Salon / séjour</h2>
+          <p class="stop__area"><span class="stop__num">38,89</span>&nbsp;m²</p>
+          <p class="stop__text">Ouvert sur la cuisine, avec de larges ouvertures vitrées.</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="cuisine" data-area="16.90" data-photo="1">
+          <p class="stop__index">La visite <span>03 / 10</span></p>
+          <h2 class="stop__title">Cuisine ouverte</h2>
+          <p class="stop__area"><span class="stop__num">16,90</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="circulation" data-area="6.58">
+          <p class="stop__index">La visite <span>04 / 10</span></p>
+          <h2 class="stop__title">WC + circulation</h2>
+          <p class="stop__area"><span class="stop__num">6,58</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="buanderie" data-area="8.52">
+          <p class="stop__index">La visite <span>05 / 10</span></p>
+          <h2 class="stop__title">Buanderie</h2>
+          <p class="stop__area"><span class="stop__num">8,52</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="chambre3" data-area="11.04">
+          <p class="stop__index">La visite <span>06 / 10</span></p>
+          <h2 class="stop__title">Chambre 3</h2>
+          <p class="stop__area"><span class="stop__num">11,04</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="sdb" data-area="9.51">
+          <p class="stop__index">La visite <span>07 / 10</span></p>
+          <h2 class="stop__title">Salle de bain</h2>
+          <p class="stop__area"><span class="stop__num">9,51</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="dressing" data-area="5.95">
+          <p class="stop__index">La visite <span>08 / 10</span></p>
+          <h2 class="stop__title">Dressing</h2>
+          <p class="stop__area"><span class="stop__num">5,95</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="chambre1" data-area="11.73">
+          <p class="stop__index">La visite <span>09 / 10</span></p>
+          <h2 class="stop__title">Chambre 1</h2>
+          <p class="stop__area"><span class="stop__num">11,73</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="chambre2" data-area="12.00">
+          <p class="stop__index">La visite <span>10 / 10</span></p>
+          <h2 class="stop__title">Chambre 2</h2>
+          <p class="stop__area"><span class="stop__num">12,00</span>&nbsp;m²</p>
+        </li>
+
+        <li class="stop stop--final" data-stop="final">
+          <p class="stop__index">Plain-pied</p>
+          <h2 class="stop__title stop__title--xl">137&nbsp;m² à vivre</h2>
+          <p class="stop__text">Vous avez un projet de construction à Fourmies ou dans l’Avesnois&#8239;? Contactez-nous gratuitement&#8239;: nous étudions chaque projet et vous proposons une solution adaptée à votre terrain, votre surface et votre budget.</p>
+          <div class="stop__ctas">
+            <a class="pill pill--solid pill--lg" href="/contact/?projet=maison-cle-en-main" data-soon>Nous contacter</a>
+            <a class="pill pill--ghost pill--lg" href="tel:+33649266478"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>06 49 26 64 78</a>
+          </div>
+        </li>
+      </ol>
+
+      <div class="visit__meter" aria-hidden="true">
+        <p class="visit__meter-label">Surface visitée</p>
+        <p class="visit__meter-value"><b id="visit-meter">0</b><span> / 137 m²</span></p>
+        <span class="visit__meter-bar"><i id="visit-meter-bar"></i></span>
+      </div>
+
+      <figure class="visit__photo" aria-hidden="true">
+        <img src="/assets/img/maison-interieur-sm.webp" width="760" height="428" alt="" loading="lazy" decoding="async">
+        <figcaption>Visuel de synthèse du modèle</figcaption>
+      </figure>
+
+      <nav class="visit__rail" aria-label="Étapes de la visite">
+        <div class="visit__rail-group" data-group="construire"><span class="visit__rail-label">Construire</span><div class="visit__rail-ticks"></div></div>
+        <div class="visit__rail-group" data-group="visiter"><span class="visit__rail-label">Visiter</span><div class="visit__rail-ticks"></div></div>
+      </nav>
+
+      <p class="visit__note">Maquette 3D illustrative&#8239;: agencement et mobilier fictifs, surfaces réelles du modèle.</p>
+      <a class="visit__skip" href="#le-modele">Passer la visite</a>
+    </div>
+  </div>
+</section>
+
+<section class="mcm-intro" id="le-modele" aria-labelledby="mcm-intro-title">
+  <div class="wrap mcm-intro__grid">
+    <div class="mcm-intro__text">
+      <h2 class="section-title" id="mcm-intro-title">Construction de maison clé en main à Fourmies et dans l’Avesnois</h2>
+      <p class="mcm-intro__lead">Vous cherchez une entreprise de construction de maison clé en main à Fourmies&#8239;? Les Établissements Lemaire, via leur filiale Maison Eriam Elora, conçoivent et réalisent des maisons individuelles neuves, de la conception architecturale jusqu’à la remise des clés.</p>
+      <p>Chaque projet allie qualité de construction, esthétique contemporaine et fonctionnalité. Nous livrons des maisons conformes aux dernières normes en vigueur, avec des finitions soignées et un suivi complet du chantier.</p>
+    </div>
+    <ul class="pillars">
+      <li class="pillar">
+        <h3>Clé en main</h3>
+        <p>De la conception à la livraison, tout est géré par nos équipes&#8239;: un seul interlocuteur, zéro stress.</p>
+      </li>
+      <li class="pillar">
+        <h3>Qualité garantie</h3>
+        <p>Construction neuve aux normes en vigueur, finitions premium soignées incluses.</p>
+      </li>
+      <li class="pillar">
+        <h3>Ancrage local</h3>
+        <p>Basés à Fourmies, nous connaissons parfaitement le territoire nordiste et ses spécificités.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="model" aria-labelledby="model-title">
+  <div class="wrap">
+    <div class="model__grid">
+      <figure class="model__photo">
+        <img src="/assets/img/maison-interieur.webp" srcset="/assets/img/maison-interieur-sm.webp 760w, /assets/img/maison-interieur.webp 1400w" sizes="(min-width: 1024px) 55vw, 100vw" width="1400" height="788" alt="Visuel de synthèse de la pièce de vie : séjour ouvert sur la cuisine" loading="lazy" decoding="async">
+        <figcaption>Visuel de synthèse, annonce non contractuelle.</figcaption>
+      </figure>
+      <div class="model__body">
+        <h2 class="section-title" id="model-title">Exemple de réalisation&#8239;: 137&nbsp;m² à Fourmies</h2>
+        <p class="model__lead">Découvrez notre première maison clé en main en cours de construction, rue Alphonse Staincq à Fourmies.</p>
+        <ul class="facts">
+          <li><b>Plain-pied</b><span>137&nbsp;m²</span></li>
+          <li><b>Façade</b><span>Enduite avec bardage bois</span></li>
+          <li><b>Toiture</b><span>Toiture terrasse</span></li>
+          <li><b>Ouvertures</b><span>Larges ouvertures vitrées</span></li>
+          <li><b>Conception</b><span>Cabinet d’architecture PLB2E</span></li>
+          <li><b>Permis de construire</b><span>Déposé en mai 2025</span></li>
+        </ul>
+        <p class="model__place">Situé dans un quartier résidentiel calme et verdoyant de Fourmies, à proximité de toutes les commodités&#8239;: commerces, écoles, accès routiers. Proche de la frontière belge.</p>
+      </div>
+    </div>
+
+    <div class="rooms">
+      <h3 class="rooms__title">Surfaces par pièce</h3>
+      <table class="rooms__table">
+        <caption class="sr-only">Surfaces par pièce de la maison de 137 m²</caption>
+        <thead><tr><th scope="col">Pièce</th><th scope="col">Surface</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Salon / séjour</th><td>38,89&nbsp;m²</td></tr>
+          <tr><th scope="row">Cuisine ouverte</th><td>16,90&nbsp;m²</td></tr>
+          <tr><th scope="row">Entrée</th><td>15,98&nbsp;m²</td></tr>
+          <tr><th scope="row">WC + circulation</th><td>6,58&nbsp;m²</td></tr>
+          <tr><th scope="row">Chambre 1</th><td>11,73&nbsp;m²</td></tr>
+          <tr><th scope="row">Chambre 2</th><td>12,00&nbsp;m²</td></tr>
+          <tr><th scope="row">Chambre 3</th><td>11,04&nbsp;m²</td></tr>
+          <tr><th scope="row">Salle de bain</th><td>9,51&nbsp;m²</td></tr>
+          <tr><th scope="row">Dressing</th><td>5,95&nbsp;m²</td></tr>
+          <tr><th scope="row">Buanderie</th><td>8,52&nbsp;m²</td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row">Total</th><td>137&nbsp;m²</td></tr></tfoot>
+      </table>
+    </div>
+
+    <p class="model__legal">Visuels de synthèse, annonce non contractuelle. Maîtrise d’œuvre&#8239;: PLB2E, 124 Route Nationale, 59129 Avesnes-les-Aubert. Permis de construire&#8239;: affaire 05.0525, commune de Fourmies, département du Nord.</p>
+  </div>
+</section>
+
+{{contact}}

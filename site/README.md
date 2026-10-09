@@ -1,6 +1,6 @@
 # Établissements Lemaire : maquette du nouveau site
 
-Maquette de présentation : la page d'accueil et les 4 pages « Nos services ». Les autres pages seront réalisées après signature. Leurs liens affichent un message « Aperçu » au lieu d'une page vide.
+Maquette de présentation : la page d'accueil, les 4 pages « Nos services » et la page « Maison clé en main ». Les autres pages seront réalisées après signature. Leurs liens affichent un message « Aperçu » au lieu d'une page vide.
 
 | Page | Adresse (identique au site actuel) |
 |---|---|
@@ -9,6 +9,7 @@ Maquette de présentation : la page d'accueil et les 4 pages « Nos services ».
 | Second œuvre | `/second-oeuvre/` |
 | Chauffage & sanitaire | `/chauffage-sanitaire/` |
 | Chaudronnerie | `/chaudronnerie-a-fourmies/` |
+| Maison clé en main | `/maison-cle-en-main-a-fourmies/` |
 
 ## Lancer la maquette
 
@@ -32,6 +33,15 @@ python tools/build_pages.py
 - `src/partials/` : en-tête, menu mobile, pied de page, accompagnement, engagements RSE, contact.
 - `src/pages/` : une page par fichier, avec ses réglages (titre, description, adresse) en tête de fichier. `_home_body.html` contient le corps de l'accueil.
 - Le bloc « Découvrez nos autres services » est généré automatiquement selon la page.
+
+## Page « Maison clé en main »
+
+La page s'ouvre sur une maquette 3D (Three.js 0.185, `assets/js/maison.js`) pilotée par le défilement. On y construit la maison selon les 4 étapes de l'offre, puis on la visite pièce par pièce.
+
+- L'agencement et le mobilier sont **fictifs**. Les surfaces des 10 pièces sont les vraies, lues dans la page.
+- Les données de la maquette (plan, murs, mobilier, cadrages) sont regroupées dans `maison.js`. Les textes des étapes sont dans `src/pages/maison-cle-en-main.html`.
+- Chaque pièce peut afficher une photo, comme le séjour et la cuisine (attribut `data-photo`). Les vraies photos du client prendront cette place.
+- Sans WebGL, ou si le visiteur a désactivé les animations, les étapes s'affichent en simple liste.
 
 ## Contenus
 

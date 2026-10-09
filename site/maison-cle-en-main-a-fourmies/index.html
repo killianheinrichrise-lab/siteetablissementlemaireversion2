@@ -3,22 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Chauffagiste à Fourmies, chauffage et sanitaire | Établissements Lemaire</title>
-  <meta name="description" content="Chauffagiste à Fourmies avec les ETS Meyer : chaudière, pompe à chaleur, poêle, plancher chauffant, salle de bain clé en main, entretien et dépannage dans l’Avesnois.">
-  <link rel="canonical" href="https://etablissementslemaire.fr/chauffage-sanitaire/">
+  <title>Construction maison clé en main à Fourmies | Établissements Lemaire</title>
+  <meta name="description" content="Construisez votre maison clé en main à Fourmies. De la conception à la livraison, tout géré par nos équipes. À partir de 165 000 €.">
+  <link rel="canonical" href="https://etablissementslemaire.fr/maison-cle-en-main-a-fourmies/">
   <meta name="theme-color" content="#EEEFEC">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Établissements Lemaire">
-  <meta property="og:title" content="Chauffagiste à Fourmies, chauffage et sanitaire | Établissements Lemaire">
-  <meta property="og:description" content="Chauffagiste à Fourmies avec les ETS Meyer : chaudière, pompe à chaleur, poêle, plancher chauffant, salle de bain clé en main, entretien et dépannage dans l’Avesnois.">
-  <meta property="og:image" content="/assets/img/hero-chauffage.webp">
+  <meta property="og:title" content="Construction maison clé en main à Fourmies | Établissements Lemaire">
+  <meta property="og:description" content="Construisez votre maison clé en main à Fourmies. De la conception à la livraison, tout géré par nos équipes. À partir de 165 000 €.">
+  <meta property="og:image" content="/assets/img/maison-interieur.webp">
   <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
 
   <link rel="preload" href="/assets/fonts/GeneralSans-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/GeneralSans-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" as="image" href="/assets/img/hero-chauffage.webp" imagesrcset="/assets/img/hero-chauffage-sm.webp 1080w, /assets/img/hero-chauffage.webp 1920w" imagesizes="100vw" fetchpriority="high">
+  <link rel="modulepreload" href="/assets/vendor/three.core.min.js">
+<link rel="modulepreload" href="/assets/vendor/three.module.min.js">
+<script>
+  // la visite 3D n'est activée que si le navigateur sait l'afficher (sinon : liste statique)
+  (function () {
+    var ok = false;
+    try { var c = document.createElement('canvas'); ok = !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) {}
+    if (ok && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('has-visit');
+    // si le script de la visite ne se charge pas, retour à la liste statique
+    setTimeout(function () { if (!window.__visitReady) document.documentElement.classList.remove('has-visit'); }, 6000);
+  })();
+</script>
   <link rel="stylesheet" href="/assets/css/main.css">
 
   <script>
@@ -32,16 +43,16 @@
   "@graph": [
     { "@type": "BreadcrumbList", "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://etablissementslemaire.fr/" },
-      { "@type": "ListItem", "position": 2, "name": "Chauffage & sanitaire", "item": "https://etablissementslemaire.fr/chauffage-sanitaire/" }
+      { "@type": "ListItem", "position": 2, "name": "Maison clé en main", "item": "https://etablissementslemaire.fr/maison-cle-en-main-a-fourmies/" }
     ] },
-    { "@type": "Service", "serviceType": "Installation, entretien et dépannage de chauffage et sanitaire", "areaServed": "Fourmies et l’Avesnois",
+    { "@type": "Service", "serviceType": "Construction de maison individuelle clé en main", "areaServed": "Fourmies et l’Avesnois",
       "provider": { "@type": "HomeAndConstructionBusiness", "name": "Établissements Lemaire", "telephone": "+33649266478",
         "address": { "@type": "PostalAddress", "streetAddress": "45 rue Léo Lagrange", "postalCode": "59610", "addressLocality": "Fourmies", "addressCountry": "FR" } } }
   ]
 }
 </script>
 </head>
-<body class="page-service">
+<body class="page-maison">
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
   <symbol id="i-arrow-left" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"/></symbol>
   <symbol id="i-arrow-right" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
@@ -75,15 +86,15 @@
     <ul class="nav-list">
       <li><a class="pill pill--nav" data-nav="home" href="/">Accueil</a></li>
       <li><a class="pill pill--nav" data-nav="apropos" href="/a-propos/" data-soon>À propos</a></li>
-      <li><a class="pill pill--nav" data-nav="maison" href="/maison-cle-en-main-a-fourmies/">Maison clé en main</a></li>
+      <li><a class="pill pill--nav is-current" data-nav="maison" href="/maison-cle-en-main-a-fourmies/" aria-current="page">Maison clé en main</a></li>
       <li class="nav-drop">
-        <button class="pill pill--nav is-current" data-nav="services" type="button" aria-expanded="false" aria-controls="menu-services">
+        <button class="pill pill--nav" data-nav="services" type="button" aria-expanded="false" aria-controls="menu-services">
           Nos services <svg class="ico ico--xs" aria-hidden="true"><use href="#i-caret-down"/></svg>
         </button>
         <ul class="nav-drop__panel" id="menu-services">
           <li><a data-svc="gros-oeuvre" href="/gros-oeuvre/">Gros œuvre</a></li>
           <li><a data-svc="second-oeuvre" href="/second-oeuvre/">Second œuvre</a></li>
-          <li><a data-svc="chauffage-sanitaire" href="/chauffage-sanitaire/" aria-current="page">Chauffage &amp; sanitaire</a></li>
+          <li><a data-svc="chauffage-sanitaire" href="/chauffage-sanitaire/">Chauffage &amp; sanitaire</a></li>
           <li><a data-svc="chaudronnerie" href="/chaudronnerie-a-fourmies/">Chaudronnerie</a></li>
         </ul>
       </li>
@@ -113,10 +124,10 @@
     <ul class="menu-mobile__list">
       <li><a data-nav="home" href="/">Accueil</a></li>
       <li><a data-nav="apropos" href="/a-propos/" data-soon>À propos</a></li>
-      <li><a data-nav="maison" href="/maison-cle-en-main-a-fourmies/">Maison clé en main</a></li>
+      <li><a data-nav="maison" href="/maison-cle-en-main-a-fourmies/" aria-current="page">Maison clé en main</a></li>
       <li><a data-svc="gros-oeuvre" href="/gros-oeuvre/">Gros œuvre</a></li>
       <li><a data-svc="second-oeuvre" href="/second-oeuvre/">Second œuvre</a></li>
-      <li><a data-svc="chauffage-sanitaire" href="/chauffage-sanitaire/" aria-current="page">Chauffage &amp; sanitaire</a></li>
+      <li><a data-svc="chauffage-sanitaire" href="/chauffage-sanitaire/">Chauffage &amp; sanitaire</a></li>
       <li><a data-svc="chaudronnerie" href="/chaudronnerie-a-fourmies/">Chaudronnerie</a></li>
       <li><a data-nav="realisations" href="/#realisations">Nos réalisations</a></li>
     </ul>
@@ -128,189 +139,204 @@
 </div>
 
 <main id="contenu">
-<section class="page-hero" aria-labelledby="page-title">
-  <div class="page-hero__frame">
-    <img class="page-hero__img" src="/assets/img/hero-chauffage.webp" srcset="/assets/img/hero-chauffage-sm.webp 1080w, /assets/img/hero-chauffage.webp 1920w" sizes="100vw" width="1920" height="1280" alt="" fetchpriority="high">
-    <div class="page-hero__shade" aria-hidden="true"></div>
-    <div class="page-hero__content">
-      <nav class="crumbs" aria-label="Fil d’Ariane">
-        <ol>
-          <li><a href="/">Accueil</a></li>
-          <li><span>Nos services</span></li>
-          <li><span aria-current="page">Chauffage &amp; sanitaire</span></li>
-        </ol>
+<section class="visit" id="visite" aria-labelledby="page-title">
+  <div class="visit__stage">
+    <canvas class="visit__canvas" aria-hidden="true"></canvas>
+    <div class="visit__veil" aria-hidden="true"></div>
+    <div class="visit__labels" aria-hidden="true"></div>
+
+    <div class="visit__hud">
+      <ol class="visit__stops">
+        <li class="stop stop--hero is-active" data-stop="hero">
+          <nav class="crumbs crumbs--dark" aria-label="Fil d’Ariane">
+            <ol>
+              <li><a href="/">Accueil</a></li>
+              <li><span aria-current="page">Maison clé en main</span></li>
+            </ol>
+          </nav>
+          <h1 class="stop__title stop__title--xl" id="page-title">Votre maison neuve clé en main à Fourmies</h1>
+          <p class="stop__text">De la conception architecturale à la remise des clés, nos équipes gèrent tout.</p>
+          <div class="stop__ctas">
+            <a class="pill pill--solid pill--lg" href="/contact/?projet=maison-cle-en-main" data-soon>Nous contacter</a>
+            <a class="pill pill--ghost pill--lg" href="tel:+33649266478"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>06 49 26 64 78</a>
+          </div>
+          <p class="stop__hint">Construisez la maison étape par étape, puis visitez-la pièce par pièce.</p>
+        </li>
+
+        <li class="stop" data-stop="conception">
+          <p class="stop__index">Notre offre clé en main <span>01 / 04</span></p>
+          <h2 class="stop__title">Conception architecturale</h2>
+          <p class="stop__text">Plan réalisé par notre cabinet partenaire PLB2E, adapté à votre terrain et à vos besoins.</p>
+        </li>
+        <li class="stop" data-stop="construction">
+          <p class="stop__index">Notre offre clé en main <span>02 / 04</span></p>
+          <h2 class="stop__title">Construction complète</h2>
+          <p class="stop__text">Gros œuvre, charpente, toiture, menuiseries&#8239;: tout est réalisé par nos équipes certifiées RGE Qualibat.</p>
+        </li>
+        <li class="stop" data-stop="finitions">
+          <p class="stop__index">Notre offre clé en main <span>03 / 04</span></p>
+          <h2 class="stop__title">Finitions premium</h2>
+          <p class="stop__text">Plâtrerie, peinture, revêtements de sol, cuisine, salle de bain&#8239;: livrée prête à vivre.</p>
+        </li>
+        <li class="stop" data-stop="cles">
+          <p class="stop__index">Notre offre clé en main <span>04 / 04</span></p>
+          <h2 class="stop__title">Remise des clés</h2>
+          <p class="stop__text">Suivi de chantier complet jusqu’à la livraison finale, avec service après-vente.</p>
+        </li>
+
+        <li class="stop stop--room" data-stop="room" data-room="entree" data-area="15.98">
+          <p class="stop__index">La visite <span>01 / 10</span></p>
+          <h2 class="stop__title">Entrée</h2>
+          <p class="stop__area"><span class="stop__num">15,98</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="sejour" data-area="38.89" data-photo="1">
+          <p class="stop__index">La visite <span>02 / 10</span></p>
+          <h2 class="stop__title">Salon / séjour</h2>
+          <p class="stop__area"><span class="stop__num">38,89</span>&nbsp;m²</p>
+          <p class="stop__text">Ouvert sur la cuisine, avec de larges ouvertures vitrées.</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="cuisine" data-area="16.90" data-photo="1">
+          <p class="stop__index">La visite <span>03 / 10</span></p>
+          <h2 class="stop__title">Cuisine ouverte</h2>
+          <p class="stop__area"><span class="stop__num">16,90</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="circulation" data-area="6.58">
+          <p class="stop__index">La visite <span>04 / 10</span></p>
+          <h2 class="stop__title">WC + circulation</h2>
+          <p class="stop__area"><span class="stop__num">6,58</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="buanderie" data-area="8.52">
+          <p class="stop__index">La visite <span>05 / 10</span></p>
+          <h2 class="stop__title">Buanderie</h2>
+          <p class="stop__area"><span class="stop__num">8,52</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="chambre3" data-area="11.04">
+          <p class="stop__index">La visite <span>06 / 10</span></p>
+          <h2 class="stop__title">Chambre 3</h2>
+          <p class="stop__area"><span class="stop__num">11,04</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="sdb" data-area="9.51">
+          <p class="stop__index">La visite <span>07 / 10</span></p>
+          <h2 class="stop__title">Salle de bain</h2>
+          <p class="stop__area"><span class="stop__num">9,51</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="dressing" data-area="5.95">
+          <p class="stop__index">La visite <span>08 / 10</span></p>
+          <h2 class="stop__title">Dressing</h2>
+          <p class="stop__area"><span class="stop__num">5,95</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="chambre1" data-area="11.73">
+          <p class="stop__index">La visite <span>09 / 10</span></p>
+          <h2 class="stop__title">Chambre 1</h2>
+          <p class="stop__area"><span class="stop__num">11,73</span>&nbsp;m²</p>
+        </li>
+        <li class="stop stop--room" data-stop="room" data-room="chambre2" data-area="12.00">
+          <p class="stop__index">La visite <span>10 / 10</span></p>
+          <h2 class="stop__title">Chambre 2</h2>
+          <p class="stop__area"><span class="stop__num">12,00</span>&nbsp;m²</p>
+        </li>
+
+        <li class="stop stop--final" data-stop="final">
+          <p class="stop__index">Plain-pied</p>
+          <h2 class="stop__title stop__title--xl">137&nbsp;m² à vivre</h2>
+          <p class="stop__text">Vous avez un projet de construction à Fourmies ou dans l’Avesnois&#8239;? Contactez-nous gratuitement&#8239;: nous étudions chaque projet et vous proposons une solution adaptée à votre terrain, votre surface et votre budget.</p>
+          <div class="stop__ctas">
+            <a class="pill pill--solid pill--lg" href="/contact/?projet=maison-cle-en-main" data-soon>Nous contacter</a>
+            <a class="pill pill--ghost pill--lg" href="tel:+33649266478"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>06 49 26 64 78</a>
+          </div>
+        </li>
+      </ol>
+
+      <div class="visit__meter" aria-hidden="true">
+        <p class="visit__meter-label">Surface visitée</p>
+        <p class="visit__meter-value"><b id="visit-meter">0</b><span> / 137 m²</span></p>
+        <span class="visit__meter-bar"><i id="visit-meter-bar"></i></span>
+      </div>
+
+      <figure class="visit__photo" aria-hidden="true">
+        <img src="/assets/img/maison-interieur-sm.webp" width="760" height="428" alt="" loading="lazy" decoding="async">
+        <figcaption>Visuel de synthèse du modèle</figcaption>
+      </figure>
+
+      <nav class="visit__rail" aria-label="Étapes de la visite">
+        <div class="visit__rail-group" data-group="construire"><span class="visit__rail-label">Construire</span><div class="visit__rail-ticks"></div></div>
+        <div class="visit__rail-group" data-group="visiter"><span class="visit__rail-label">Visiter</span><div class="visit__rail-ticks"></div></div>
       </nav>
-      <h1 class="page-hero__title" id="page-title">Chauffagiste à Fourmies<span class="sr-only">, </span> <span class="page-hero__sub">Installation chauffage &amp; sanitaire</span></h1>
-      <p class="page-hero__lead">Installation, remplacement et entretien de vos systèmes de chauffage et de vos sanitaires dans l’Avesnois, avec les ETS Meyer.</p>
-      <div class="hero-ctas">
-        <a class="pill pill--solid pill--lg" href="/contact/" data-soon>Nous contacter</a>
-        <a class="pill pill--glass pill--lg" href="tel:+33649266478"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>06 49 26 64 78</a>
+
+      <p class="visit__note">Maquette 3D illustrative&#8239;: agencement et mobilier fictifs, surfaces réelles du modèle.</p>
+      <a class="visit__skip" href="#le-modele">Passer la visite</a>
+    </div>
+  </div>
+</section>
+
+<section class="mcm-intro" id="le-modele" aria-labelledby="mcm-intro-title">
+  <div class="wrap mcm-intro__grid">
+    <div class="mcm-intro__text">
+      <h2 class="section-title" id="mcm-intro-title">Construction de maison clé en main à Fourmies et dans l’Avesnois</h2>
+      <p class="mcm-intro__lead">Vous cherchez une entreprise de construction de maison clé en main à Fourmies&#8239;? Les Établissements Lemaire, via leur filiale Maison Eriam Elora, conçoivent et réalisent des maisons individuelles neuves, de la conception architecturale jusqu’à la remise des clés.</p>
+      <p>Chaque projet allie qualité de construction, esthétique contemporaine et fonctionnalité. Nous livrons des maisons conformes aux dernières normes en vigueur, avec des finitions soignées et un suivi complet du chantier.</p>
+    </div>
+    <ul class="pillars">
+      <li class="pillar">
+        <h3>Clé en main</h3>
+        <p>De la conception à la livraison, tout est géré par nos équipes&#8239;: un seul interlocuteur, zéro stress.</p>
+      </li>
+      <li class="pillar">
+        <h3>Qualité garantie</h3>
+        <p>Construction neuve aux normes en vigueur, finitions premium soignées incluses.</p>
+      </li>
+      <li class="pillar">
+        <h3>Ancrage local</h3>
+        <p>Basés à Fourmies, nous connaissons parfaitement le territoire nordiste et ses spécificités.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="model" aria-labelledby="model-title">
+  <div class="wrap">
+    <div class="model__grid">
+      <figure class="model__photo">
+        <img src="/assets/img/maison-interieur.webp" srcset="/assets/img/maison-interieur-sm.webp 760w, /assets/img/maison-interieur.webp 1400w" sizes="(min-width: 1024px) 55vw, 100vw" width="1400" height="788" alt="Visuel de synthèse de la pièce de vie : séjour ouvert sur la cuisine" loading="lazy" decoding="async">
+        <figcaption>Visuel de synthèse, annonce non contractuelle.</figcaption>
+      </figure>
+      <div class="model__body">
+        <h2 class="section-title" id="model-title">Exemple de réalisation&#8239;: 137&nbsp;m² à Fourmies</h2>
+        <p class="model__lead">Découvrez notre première maison clé en main en cours de construction, rue Alphonse Staincq à Fourmies.</p>
+        <ul class="facts">
+          <li><b>Plain-pied</b><span>137&nbsp;m²</span></li>
+          <li><b>Façade</b><span>Enduite avec bardage bois</span></li>
+          <li><b>Toiture</b><span>Toiture terrasse</span></li>
+          <li><b>Ouvertures</b><span>Larges ouvertures vitrées</span></li>
+          <li><b>Conception</b><span>Cabinet d’architecture PLB2E</span></li>
+          <li><b>Permis de construire</b><span>Déposé en mai 2025</span></li>
+        </ul>
+        <p class="model__place">Situé dans un quartier résidentiel calme et verdoyant de Fourmies, à proximité de toutes les commodités&#8239;: commerces, écoles, accès routiers. Proche de la frontière belge.</p>
       </div>
     </div>
-    <ul class="page-hero__links" aria-label="Accès rapide aux prestations">
-      <li><a href="#chauffage">Chauffage</a></li>
-      <li><a href="#depannage">Dépannage</a></li>
-      <li><a href="#sanitaire">Sanitaire</a></li>
-      <li><a href="#rge">Aides RGE</a></li>
-    </ul>
-  </div>
-</section>
 
-<section class="partner" aria-labelledby="partner-title">
-  <div class="wrap partner__grid">
-    <div class="partner__logo"><img src="/assets/img/logo-meyer.webp" width="512" height="335" alt="Ets Meyer" loading="lazy"></div>
-    <div class="partner__body">
-      <h2 class="section-title" id="partner-title">ETS Meyer</h2>
-      <p class="partner__lead">Chauffagiste à Fourmies depuis 2018, les Établissements Lemaire et les ETS Meyer sont spécialisés dans l’installation, le remplacement et l’entretien de tous vos systèmes de chauffage et de vos travaux sanitaires dans l’Avesnois.</p>
-      <p>Chaudière, pompe à chaleur, plancher chauffant, installation de salle de bain clé en main&#8239;: nos équipes certifiées QualiGaz et Qualit’ENR vous accompagnent de A à Z. Que vous soyez particulier ou professionnel à Fourmies, Maubeuge, Avesnes-sur-Helpe ou dans tout l’Avesnois, nous intervenons rapidement pour vos projets de chauffage et de sanitaire. Devis gratuit.</p>
-      <p class="partner__note">Spécialisée dans le chauffage et la plomberie, l’entreprise Meyer a rejoint les Établissements Lemaire en 2022.</p>
+    <div class="rooms">
+      <h3 class="rooms__title">Surfaces par pièce</h3>
+      <table class="rooms__table">
+        <caption class="sr-only">Surfaces par pièce de la maison de 137 m²</caption>
+        <thead><tr><th scope="col">Pièce</th><th scope="col">Surface</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Salon / séjour</th><td>38,89&nbsp;m²</td></tr>
+          <tr><th scope="row">Cuisine ouverte</th><td>16,90&nbsp;m²</td></tr>
+          <tr><th scope="row">Entrée</th><td>15,98&nbsp;m²</td></tr>
+          <tr><th scope="row">WC + circulation</th><td>6,58&nbsp;m²</td></tr>
+          <tr><th scope="row">Chambre 1</th><td>11,73&nbsp;m²</td></tr>
+          <tr><th scope="row">Chambre 2</th><td>12,00&nbsp;m²</td></tr>
+          <tr><th scope="row">Chambre 3</th><td>11,04&nbsp;m²</td></tr>
+          <tr><th scope="row">Salle de bain</th><td>9,51&nbsp;m²</td></tr>
+          <tr><th scope="row">Dressing</th><td>5,95&nbsp;m²</td></tr>
+          <tr><th scope="row">Buanderie</th><td>8,52&nbsp;m²</td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row">Total</th><td>137&nbsp;m²</td></tr></tfoot>
+      </table>
     </div>
-  </div>
-</section>
 
-<section class="prestations" id="prestations" aria-label="Nos prestations de chauffage et sanitaire">
-  <div class="wrap prestations__grid">
-    <nav class="toc" aria-label="Prestations de chauffage et sanitaire">
-      <p class="toc__title">Prestations</p>
-      <ol class="toc__list">
-        <li><a href="#chauffage">Chauffage</a></li>
-        <li><a href="#depannage">Dépannage</a></li>
-        <li><a href="#marques">Nos marques partenaires</a></li>
-        <li><a href="#sanitaire">Sanitaire</a></li>
-        <li><a href="#rge">Chauffagiste certifié RGE</a></li>
-      </ol>
-    </nav>
-
-    <div class="prestations__list">
-      <article class="presta" id="chauffage" aria-labelledby="t-chauffage">
-        <h2 class="presta__title" id="t-chauffage">Chauffage</h2>
-        <figure class="presta__media"><img src="/assets/img/svc-chauffage.webp" srcset="/assets/img/svc-chauffage-sm.webp 700w, /assets/img/svc-chauffage.webp 1080w" sizes="(min-width: 1100px) 60vw, 100vw" width="1080" height="663" alt="Poêle à bois installé dans un intérieur" loading="lazy" decoding="async"></figure>
-        <p class="presta__lead">Les Établissements Lemaire et les ETS Meyer vous proposent différentes solutions de chauffage&#8239;:</p>
-        <ul class="tiles">
-          <li>Chaudière à bois, à granulés</li>
-          <li>Poêle à granulés standard et hydro</li>
-          <li>Chaudière gaz</li>
-          <li>Pompe à chaleur air/air et air/eau</li>
-          <li>Climatisation réversible</li>
-          <li>Plancher chauffant</li>
-        </ul>
-        <h3 class="presta__sub">Entretien</h3>
-        <p class="presta__text">Pour vous garantir un suivi complet avant, pendant et après l’installation de votre système de chauffage, nos équipes assurent l’entretien de vos chaudières (gaz, granulés, fioul…) et de vos poêles à bois.</p>
-      </article>
-
-      <aside class="callout" id="depannage" aria-labelledby="t-depannage">
-        <div class="callout__body">
-          <h2 class="callout__title" id="t-depannage">Dépannage</h2>
-          <p>Nos chauffagistes à Fourmies interviennent rapidement pour le dépannage de vos installations existantes. Panne de chaudière, fuite sur circuit de chauffage, radiateur froid&#8239;: nous assurons un diagnostic précis et une intervention dans les meilleurs délais sur tout le secteur de Fourmies et de l’Avesnois.</p>
-        </div>
-        <div class="callout__action">
-          <p class="callout__hint">Contactez-nous pour toute urgence</p>
-          <a class="callout__phone" href="tel:+33649266478"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>06 49 26 64 78</a>
-        </div>
-      </aside>
-
-      <article class="presta" id="marques" aria-labelledby="t-marques">
-        <h2 class="presta__title" id="t-marques">Nos marques partenaires</h2>
-        <p class="presta__lead">Les ETS Lemaire et Meyer s’entourent des plus grandes marques pour vous proposer des solutions de qualité.</p>
-        <ul class="brands">
-          <li><img src="/assets/img/marque-dedietrich.webp" width="150" height="150" alt="De Dietrich" loading="lazy"></li>
-          <li><img src="/assets/img/marque-atlantic.webp" width="150" height="150" alt="Atlantic" loading="lazy"></li>
-          <li><img src="/assets/img/marque-okofen.webp" width="150" height="150" alt="ÖkoFEN" loading="lazy"></li>
-          <li><img src="/assets/img/marque-ravelli.webp" width="150" height="150" alt="Ravelli" loading="lazy"></li>
-          <li><img src="/assets/img/marque-wolff.webp" width="150" height="150" alt="Wolff Chauffage &amp; Sanitaire" loading="lazy"></li>
-          <li><img src="/assets/img/marque-westa.webp" width="150" height="150" alt="Westa France" loading="lazy"></li>
-          <li><img src="/assets/img/marque-wesman.webp" width="150" height="150" alt="Wesman" loading="lazy"></li>
-        </ul>
-      </article>
-
-      <article class="presta" id="sanitaire" aria-labelledby="t-sanitaire">
-        <h2 class="presta__title" id="t-sanitaire">Sanitaire</h2>
-        <p class="presta__lead">Les Établissements Lemaire et Meyer vous proposent un ensemble de services liés au sanitaire&#8239;:</p>
-        <ul class="checks">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Réalisation des évacuations pour l’ensemble de la maison</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Création des réseaux d’eau chaude et d’eau froide avec l’installation des nourrices</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Raccordement des éléments sanitaires&#8239;: lavabo, douche, évier, baignoire…</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Création de salles de bain clé en main, des plans jusqu’à la livraison du chantier</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Entretien et dépannage</li>
-        </ul>
-      </article>
-
-      <article class="presta" id="rge" aria-labelledby="t-rge">
-        <h2 class="presta__title" id="t-rge">Pourquoi choisir un chauffagiste certifié RGE&#8239;?</h2>
-        <p class="presta__lead">Faire appel à un chauffagiste certifié RGE vous permet de bénéficier des aides financières de l’État pour vos travaux de rénovation énergétique&#8239;:</p>
-        <ul class="tiles tiles--aids">
-          <li>MaPrimeRénov’</li>
-          <li>Certificats d’économies d’énergie (CEE)</li>
-          <li>Éco-prêt à taux zéro</li>
-        </ul>
-        <p class="presta__text">Les ETS Meyer, chauffagistes certifiés QualiGaz, Qualit’ENR et Professionnels du Gaz, interviennent sur tout le secteur de Fourmies et de l’Avesnois pour l’installation de systèmes performants et économes en énergie.</p>
-        <p class="presta__note">Vous souhaitez réduire vos factures de chauffage&#8239;? Contactez-nous pour un devis gratuit.</p>
-        <a class="pill pill--solid pill--lg" href="/contact/" data-soon>Nous contacter</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="rse" aria-labelledby="rse-title">
-  <div class="wrap">
-    <div class="rse__head">
-      <h2 class="section-title" id="rse-title">Nos engagements RSE &amp; certifications</h2>
-      <p class="rse__lead">Conscients de l’impact de leur activité sur l’environnement, les Établissements Lemaire ont mis en place plusieurs actions pour agir durablement.</p>
-    </div>
-    <ul class="rse__grid">
-      <li class="rse__item">
-        <h3>Recycl’Me</h3>
-        <p>Création de l’entreprise Recycl’Me, qui traite l’ensemble des déchets générés par nos chantiers, en partenariat avec les entreprises Flamme et Suez.</p>
-      </li>
-      <li class="rse__item">
-        <h3>Nos certifications</h3>
-        <p>RGE Qualibat, QualiGaz, Qualif’Elec, Qualit’ENR, Professionnels du Gaz, spécification ATG-B.540-9 (Gaz de France)… pour garantir le respect des normes environnementales et des services de qualité.</p>
-      </li>
-      <li class="rse__item">
-        <h3>Soutien à l’emploi local</h3>
-        <p>Nous axons nos recrutements sur le secteur de Fourmies et ses environs afin de favoriser le dynamisme économique de notre territoire.</p>
-      </li>
-      <li class="rse__item">
-        <h3>Formation des jeunes</h3>
-        <p>Nous engageons des apprentis pour leur garantir un avenir et valoriser les métiers du bâtiment.</p>
-      </li>
-    </ul>
-    <ul class="rse__logos" aria-label="Certifications et Recycl’Me">
-      <li><img src="/assets/img/logo-qualibat-rge.webp" width="198" height="230" alt="RGE Qualibat" loading="lazy"></li>
-      <li><img src="/assets/img/logo-qualitenr.webp" width="426" height="225" alt="Qualit’EnR" loading="lazy"></li>
-      <li><img src="/assets/img/logo-qualifelec.webp" width="188" height="228" alt="Qualifelec" loading="lazy"></li>
-      <li><img src="/assets/img/logo-qualigaz-rge.webp" width="495" height="151" alt="RGE QualiGaz" loading="lazy"></li>
-      <li><img src="/assets/img/logo-recyclme.webp" width="446" height="148" alt="Recycl’Me" loading="lazy"></li>
-    </ul>
-  </div>
-</section>
-
-<section class="others" aria-labelledby="others-title">
-  <div class="wrap">
-    <h2 class="section-title" id="others-title">Découvrez nos autres services</h2>
-    <ul class="others__list">
-      <li class="other">
-        <a href="/gros-oeuvre/">
-          <span class="other__media"><img src="/assets/img/svc-gros-oeuvre-sm.webp" width="760" height="406" alt="" loading="lazy" decoding="async"></span>
-          <span class="other__name">Gros œuvre <svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
-          <span class="other__text">De la maçonnerie aux finitions, nous vous accompagnons dans tous vos projets de construction et de rénovation : charpente, toiture, isolation, ravalement, menuiserie, revêtements…</span>
-        </a>
-      </li>
-      <li class="other">
-        <a href="/second-oeuvre/">
-          <span class="other__media"><img src="/assets/img/svc-second-oeuvre-sm.webp" width="760" height="406" alt="" loading="lazy" decoding="async"></span>
-          <span class="other__name">Second œuvre <svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
-          <span class="other__text">Nous vous accompagnons dans l’ensemble des finitions intérieures de votre habitat, de la définition des espaces avec la plâtrerie jusqu’à la peinture.</span>
-        </a>
-      </li>
-      <li class="other">
-        <a href="/chaudronnerie-a-fourmies/">
-          <span class="other__media"><img src="/assets/img/steel-dream-sm.webp" width="760" height="406" alt="" loading="lazy" decoding="async"></span>
-          <span class="other__name">Chaudronnerie <svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
-          <span class="other__text">Nos ateliers de chaudronnerie conçoivent des structures métalliques sur mesure : escaliers, garde-corps, portails, carports, verrières…</span>
-        </a>
-      </li>
-    </ul>
+    <p class="model__legal">Visuels de synthèse, annonce non contractuelle. Maîtrise d’œuvre&#8239;: PLB2E, 124 Route Nationale, 59129 Avesnes-les-Aubert. Permis de construire&#8239;: affaire 05.0525, commune de Fourmies, département du Nord.</p>
   </div>
 </section>
 
@@ -324,12 +350,12 @@
           <legend>Votre projet concerne</legend>
           <button type="button" class="chip" aria-pressed="false" data-value="gros-oeuvre"><svg class="ico ico--xs" aria-hidden="true"><use href="#i-check"/></svg>Gros œuvre</button>
           <button type="button" class="chip" aria-pressed="false" data-value="second-oeuvre"><svg class="ico ico--xs" aria-hidden="true"><use href="#i-check"/></svg>Second œuvre</button>
-          <button type="button" class="chip" aria-pressed="true" data-value="chauffage-sanitaire"><svg class="ico ico--xs" aria-hidden="true"><use href="#i-check"/></svg>Chauffage &amp; sanitaire</button>
+          <button type="button" class="chip" aria-pressed="false" data-value="chauffage-sanitaire"><svg class="ico ico--xs" aria-hidden="true"><use href="#i-check"/></svg>Chauffage &amp; sanitaire</button>
           <button type="button" class="chip" aria-pressed="false" data-value="chaudronnerie"><svg class="ico ico--xs" aria-hidden="true"><use href="#i-check"/></svg>Chaudronnerie</button>
-          <button type="button" class="chip" aria-pressed="false" data-value="maison-cle-en-main"><svg class="ico ico--xs" aria-hidden="true"><use href="#i-check"/></svg>Maison clé en main</button>
+          <button type="button" class="chip" aria-pressed="true" data-value="maison-cle-en-main"><svg class="ico ico--xs" aria-hidden="true"><use href="#i-check"/></svg>Maison clé en main</button>
         </fieldset>
 
-        <a class="pill pill--solid pill--lg contact__cta" id="contact-cta" href="/contact/?projet=chauffage-sanitaire" data-soon>Nous contacter <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <a class="pill pill--solid pill--lg contact__cta" id="contact-cta" href="/contact/?projet=maison-cle-en-main" data-soon>Nous contacter <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </div>
 
       <address class="contact__info">
@@ -410,6 +436,6 @@
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/lenis.min.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
-
+<script type="module" src="/assets/js/maison.js"></script>
 </body>
 </html>
