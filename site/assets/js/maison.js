@@ -16,6 +16,13 @@ if (section && root.classList.contains('has-visit')) {
 function init() {
   const stage = section.querySelector('.visit__stage');
   const canvas = section.querySelector('.visit__canvas');
+  // garde-fou : si la feuille de style de la visite n'est pas chargée (ancienne version
+  // en cache, réseau…), la scène ne remplirait pas l'écran : on reste sur la liste statique
+  const stageH = stage.getBoundingClientRect().height;
+  if (getComputedStyle(canvas).position !== 'absolute' || stageH < window.innerHeight * 0.6 || stageH > window.innerHeight * 1.4) {
+    root.classList.remove('has-visit');
+    return;
+  }
   let renderer;
   try {
     renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });

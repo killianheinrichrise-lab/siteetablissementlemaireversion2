@@ -93,6 +93,24 @@ def mark_current(html, nav, svc):
     return html
 
 
+def version_assets(html):
+    """Ajoute ?v=<empreinte du fichier> aux CSS et JS du site.
+
+    Chaque modification change l'adresse du fichier : les navigateurs ne peuvent
+    plus servir une ancienne version gardée en cache.
+    """
+    import hashlib
+
+    def repl(m):
+        f = OUT / m.group(1).lstrip("/")
+        if not f.exists():
+            return m.group(0)
+        digest = hashlib.sha1(f.read_bytes()).hexdigest()[:10]
+        return f'{m.group(1)}?v={digest}"'
+
+    return re.sub(r'(/assets/(?:css|js)/[\w.\-]+\.(?:css|js))"', repl, html)
+
+
 def main():
     layout = (SRC / "layout.html").read_text(encoding="utf-8")
     partials = {p.stem: p.read_text(encoding="utf-8").strip() for p in (SRC / "partials").glob("*.html")}
@@ -111,6 +129,7 @@ def main():
         ctx.setdefault("og_image", "/assets/img/boue-apres.webp")
         html = render(layout, ctx)
         html = mark_current(html, meta.get("nav", ""), meta.get("svc", ""))
+        html = version_assets(html)
 
         path = meta["path"].strip("/")
         target = OUT / path / "index.html" if path else OUT / "index.html"
