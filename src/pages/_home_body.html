@@ -1,0 +1,347 @@
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-frame">
+      <svg class="hero-scene" id="hero-scene" viewBox="0 0 1920 1524" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="hero-word-clip"><rect id="hero-word-clip-rect" x="0" y="0" width="1920" height="790"/></clipPath>
+        </defs>
+        <g class="hero-scene__media">
+          <image class="hero-bg" width="1920" height="1645" preserveAspectRatio="none" href="/assets/img/hero-bg.webp" data-wide="/assets/img/hero-bg.webp" data-small="/assets/img/hero-bg-m.webp"/>
+        </g>
+        <g class="hero-word" id="hero-word" clip-path="url(#hero-word-clip)">
+          <text class="hero-word__pre" id="hero-pre" x="225" y="433">Établissements</text>
+          <text class="hero-word__main" id="hero-main" x="50" y="726" textLength="1820" lengthAdjust="spacing">Lemaire</text>
+        </g>
+        <g class="hero-scene__media">
+          <image class="hero-cut" width="1920" height="1645" preserveAspectRatio="none" href="/assets/img/hero-cut.webp" data-wide="/assets/img/hero-cut.webp" data-small="/assets/img/hero-cut-m.webp"/>
+        </g>
+      </svg>
+      <script>
+        // image adaptée à l'écran avant le premier rendu (mobile : version 1080 px)
+        (function () {
+          if (!window.matchMedia('(max-width: 900px)').matches) return;
+          document.querySelectorAll('#hero-scene image').forEach(function (img) { img.setAttribute('href', img.dataset.small); });
+        })();
+      </script>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="hero-statements" aria-hidden="true">
+        <p>Entreprise générale<br>du bâtiment</p>
+        <p>Tous corps d’état,<br>zéro sous-traitance</p>
+        <p>45 rue Léo Lagrange<br>59610 Fourmies</p>
+      </div>
+
+      <div class="hero-bottom">
+        <h1 class="sr-only" id="hero-title">Établissements Lemaire</h1>
+        <p class="hero-slogan">Construction et rénovation à Fourmies</p>
+        <div class="hero-ctas">
+          <a class="pill pill--solid pill--lg" href="/contact/" data-soon>Nous contacter</a>
+          <a class="pill pill--glass pill--lg" href="#realisations">Voir nos réalisations</a>
+        </div>
+      </div>
+
+      <a class="hero-card" href="#chantier">
+        <span class="hero-card__thumb">
+          <img src="/assets/img/boue-avant-sm.webp" width="760" height="467" alt="" loading="eager" decoding="async">
+        </span>
+        <span class="hero-card__text">
+          <span class="hero-card__title">Gîte de Boué</span>
+          <span class="hero-card__desc">Une bâtisse en ruine, rénovée du gros œuvre aux finitions.</span>
+          <span class="hero-card__link">Voir l’avant / après <svg class="ico ico--xs" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATIONS ===================== -->
+  <section class="certifs" aria-labelledby="certifs-title">
+    <div class="wrap certifs__inner">
+      <h2 class="certifs__label" id="certifs-title">Entreprise certifiée</h2>
+      <ul class="certifs__logos">
+        <li><img src="/assets/img/logo-qualibat-rge.webp" width="198" height="230" alt="RGE Qualibat" loading="lazy"></li>
+        <li><img src="/assets/img/logo-qualitenr.webp" width="426" height="225" alt="Qualit’EnR" loading="lazy"></li>
+        <li><img src="/assets/img/logo-qualifelec.webp" width="188" height="228" alt="Qualifelec" loading="lazy"></li>
+        <li><img src="/assets/img/logo-qualigaz-rge.webp" width="495" height="151" alt="RGE QualiGaz" loading="lazy"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== MANIFESTE ===================== -->
+  <section class="manifesto" aria-labelledby="manifesto-title">
+    <div class="wrap">
+      <h2 class="sr-only" id="manifesto-title">L’entreprise</h2>
+      <p class="manifesto__text" data-scrub-words>Depuis 2018, les Établissements Lemaire vous accompagnent sur tous vos projets de construction, de rénovation et d’aménagement, à l’intérieur comme à l’extérieur. Basés à Fourmies, nous réunissons tous les corps de métier, sans sous-traitance.</p>
+
+      <dl class="figures">
+        <div class="figure">
+          <dt class="figure__value">2018</dt>
+          <dd class="figure__label">Démarrage de l’activité</dd>
+        </div>
+        <div class="figure">
+          <dt class="figure__value">32</dt>
+          <dd class="figure__label">salariés issus du territoire</dd>
+        </div>
+        <div class="figure">
+          <dt class="figure__value">4,4<span>/5</span></dt>
+          <dd class="figure__label">note Google, sur 36 avis</dd>
+        </div>
+        <div class="figure">
+          <dt class="figure__value">0</dt>
+          <dd class="figure__label">sous-traitant&#8239;: tous nos corps de métier sont en interne</dd>
+        </div>
+      </dl>
+
+      <a class="link-arrow" href="/a-propos/" data-soon>Découvrir l’entreprise <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </section>
+
+  <!-- ===================== MÉTIERS ===================== -->
+  <section class="metiers" id="metiers" aria-labelledby="metiers-title">
+    <div class="wrap">
+      <h2 class="section-title" id="metiers-title">Tous les métiers du bâtiment, en interne.</h2>
+
+      <ul class="metiers__list">
+        <li class="metier">
+          <a class="metier__link" href="/gros-oeuvre/" data-preview="/assets/img/svc-gros-oeuvre-sm.webp">
+            <span class="metier__title">Gros œuvre</span>
+            <span class="metier__desc">Dalles et fondations, maçonnerie, charpente, couverture, menuiseries, isolation extérieure et aménagements extérieurs.</span>
+            <span class="metier__go" aria-hidden="true"><svg class="ico"><use href="#i-arrow-up-right"/></svg></span>
+            <img class="metier__img" src="/assets/img/svc-gros-oeuvre-sm.webp" width="760" height="406" alt="Coulage d’une dalle par un compagnon des Établissements Lemaire" loading="lazy" decoding="async">
+          </a>
+        </li>
+        <li class="metier">
+          <a class="metier__link" href="/second-oeuvre/" data-preview="/assets/img/svc-second-oeuvre-sm.webp">
+            <span class="metier__title">Second œuvre</span>
+            <span class="metier__desc">Électricité, planchers et revêtements de sol, isolation intérieure, plâtrerie et peinture.</span>
+            <span class="metier__go" aria-hidden="true"><svg class="ico"><use href="#i-arrow-up-right"/></svg></span>
+            <img class="metier__img" src="/assets/img/svc-second-oeuvre-sm.webp" width="760" height="406" alt="Chambre rénovée du gîte de Boué" loading="lazy" decoding="async">
+          </a>
+        </li>
+        <li class="metier">
+          <a class="metier__link" href="/chauffage-sanitaire/" data-preview="/assets/img/svc-chauffage-sm.webp">
+            <span class="metier__title">Chauffage &amp; sanitaire <em class="metier__with">avec les Éts Meyer</em></span>
+            <span class="metier__desc">Chaudières, pompes à chaleur, poêles, plancher chauffant, salles de bain clé en main, entretien et dépannage.</span>
+            <span class="metier__go" aria-hidden="true"><svg class="ico"><use href="#i-arrow-up-right"/></svg></span>
+            <img class="metier__img" src="/assets/img/svc-chauffage-sm.webp" width="700" height="430" alt="Poêle à bois installé dans un intérieur" loading="lazy" decoding="async">
+          </a>
+        </li>
+        <li class="metier">
+          <a class="metier__link" href="/chaudronnerie-a-fourmies/" data-preview="/assets/img/steel-dream-sm.webp">
+            <span class="metier__title">Chaudronnerie <em class="metier__with">avec Steel Dream</em></span>
+            <span class="metier__desc">Escaliers, garde-corps, portails, carports, verrières et structures métalliques sur mesure.</span>
+            <span class="metier__go" aria-hidden="true"><svg class="ico"><use href="#i-arrow-up-right"/></svg></span>
+            <img class="metier__img" src="/assets/img/steel-dream-sm.webp" width="700" height="430" alt="Escaliers et garde-corps métalliques fabriqués pour la rénovation de 6 appartements à Fourmies" loading="lazy" decoding="async">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="metier-preview" aria-hidden="true"><img alt="" src="/assets/img/svc-gros-oeuvre-sm.webp" width="760" height="570"></div>
+  </section>
+
+  <!-- ===================== CHANTIER À LA UNE ===================== -->
+  <section class="chantier" id="chantier" aria-labelledby="chantier-title">
+    <div class="wrap chantier__grid">
+      <div class="chantier__media">
+        <div class="compare" data-state="apres">
+          <img class="compare__img compare__img--avant" src="/assets/img/boue-avant.webp" width="1080" height="663" alt="La bâtisse de Boué avant les travaux, en ruine" loading="lazy" decoding="async">
+          <img class="compare__img compare__img--apres" src="/assets/img/boue-apres.webp" width="1800" height="961" alt="Le gîte de Boué après la rénovation par les Établissements Lemaire" loading="lazy" decoding="async">
+          <div class="compare__switch" role="group" aria-label="Afficher la photo">
+            <button type="button" class="compare__btn" data-target="avant" aria-pressed="false">Avant</button>
+            <button type="button" class="compare__btn" data-target="apres" aria-pressed="true">Après</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="chantier__body">
+        <p class="eyebrow">Réalisation à la une</p>
+        <h2 class="section-title" id="chantier-title">Un chantier, tous nos métiers.</h2>
+        <p class="chantier__lead">À Boué, nos équipes ont redonné vie à une bâtisse laissée à l’abandon depuis de nombreuses années, pour en faire un gîte moderne et chaleureux, avec un espace spa.</p>
+
+        <ul class="trades">
+          <li class="trade">
+            <button class="trade__btn" type="button" aria-expanded="true" aria-controls="trade-1">
+              <span>Gros œuvre</span><span class="trade__icon" aria-hidden="true"><svg class="ico ico--sm"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="trade__panel" id="trade-1"><div><p>Consolidation des fondations, reprise des murs et remise en état de la structure porteuse.</p></div></div>
+          </li>
+          <li class="trade">
+            <button class="trade__btn" type="button" aria-expanded="false" aria-controls="trade-2">
+              <span>Charpente &amp; structure</span><span class="trade__icon" aria-hidden="true"><svg class="ico ico--sm"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="trade__panel" id="trade-2"><div><p>Réfection complète pour garantir la solidité et la durabilité du bâtiment.</p></div></div>
+          </li>
+          <li class="trade">
+            <button class="trade__btn" type="button" aria-expanded="false" aria-controls="trade-3">
+              <span>Second œuvre</span><span class="trade__icon" aria-hidden="true"><svg class="ico ico--sm"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="trade__panel" id="trade-3"><div><p>Plâtrerie, sols, finitions intérieures et aménagements.</p></div></div>
+          </li>
+          <li class="trade">
+            <button class="trade__btn" type="button" aria-expanded="false" aria-controls="trade-4">
+              <span>Chaudronnerie</span><span class="trade__icon" aria-hidden="true"><svg class="ico ico--sm"><use href="#i-plus"/></svg></span>
+            </button>
+            <div class="trade__panel" id="trade-4"><div><p>Création du garde-corps dans la partie principale.</p></div></div>
+          </li>
+        </ul>
+
+        <a class="link-arrow" href="/project/renovation-de-gite-boue/" data-soon>Voir le projet <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MAISON CLÉ EN MAIN ===================== -->
+  <section class="maison" id="maison" aria-labelledby="maison-title">
+    <div class="wrap">
+      <div class="maison__top">
+        <div class="maison__head">
+          <h2 class="maison__title" id="maison-title">Votre maison neuve clé en main à Fourmies</h2>
+          <p class="maison__lead">De la conception architecturale à la remise des clés, nos équipes gèrent tout.</p>
+          <a class="pill pill--light pill--lg" href="/maison-cle-en-main-a-fourmies/" data-soon>Découvrir l’offre <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        </div>
+        <figure class="maison__photo">
+          <img src="/assets/img/maison-interieur.webp" width="1400" height="788" alt="Pièce de vie de la maison clé en main de Fourmies, cuisine ouverte et séjour" loading="lazy" decoding="async">
+        </figure>
+      </div>
+
+      <ol class="maison__steps">
+        <li><h3>Conception architecturale</h3><p>Plan réalisé par notre cabinet partenaire PLB2E, adapté à votre terrain et à vos besoins.</p></li>
+        <li><h3>Construction complète</h3><p>Gros œuvre, charpente, toiture, menuiseries&#8239;: tout est réalisé par nos équipes certifiées RGE Qualibat.</p></li>
+        <li><h3>Finitions premium</h3><p>Plâtrerie, peinture, revêtements de sol, cuisine, salle de bain&#8239;: livrée prête à vivre.</p></li>
+        <li><h3>Remise des clés</h3><p>Suivi de chantier complet jusqu’à la livraison finale, avec service après-vente.</p></li>
+      </ol>
+
+    </div>
+  </section>
+
+  <!-- ===================== RÉALISATIONS ===================== -->
+  <section class="realisations" id="realisations" aria-labelledby="realisations-title">
+    <div class="realisations__pin">
+      <div class="wrap realisations__head">
+        <h2 class="section-title" id="realisations-title">Nos réalisations</h2>
+        <a class="link-arrow" href="/realisations/" data-soon>Voir nos réalisations <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <div class="realisations__viewport">
+        <ul class="realisations__track">
+          <li class="projet projet--tall">
+            <a href="/project/renovation-de-gite-boue/" data-soon>
+              <span class="projet__media"><img src="/assets/img/boue-spa.webp" width="1080" height="663" alt="Espace spa du gîte rénové à Boué" loading="lazy" decoding="async"></span>
+              <span class="projet__meta"><span class="projet__cat">Gros œuvre</span><span class="projet__title">Rénovation de gîte</span><span class="projet__place">Boué</span></span>
+            </a>
+          </li>
+          <li class="projet projet--wide">
+            <a href="/project/renovation-de-6-appartements-fourmies/" data-soon>
+              <span class="projet__media"><img src="/assets/img/appartements-fourmies.webp" width="1080" height="663" alt="Façade rénovée et escaliers métalliques des 6 appartements à Fourmies" loading="lazy" decoding="async"></span>
+              <span class="projet__meta"><span class="projet__cat">Gros œuvre</span><span class="projet__title">Rénovation de 6 appartements</span><span class="projet__place">Fourmies</span></span>
+            </a>
+          </li>
+          <li class="projet projet--tall">
+            <a href="/project/isolation-exterieure-avec-enduit-secteur-fourmies/" data-soon>
+              <span class="projet__media"><img src="/assets/img/ite-fourmies.webp" width="1600" height="854" alt="Maison isolée par l’extérieur avec finition enduit, secteur de Fourmies" loading="lazy" decoding="async"></span>
+              <span class="projet__meta"><span class="projet__cat">Gros œuvre</span><span class="projet__title">Isolation extérieure avec enduit</span><span class="projet__place">Secteur Fourmies</span></span>
+            </a>
+          </li>
+          <li class="projet projet--wide">
+            <a href="/project/renovation-avesnes-sur-helpe/" data-soon>
+              <span class="projet__media"><img src="/assets/img/restaurant-avesnes.webp" width="1080" height="663" alt="Façade rénovée de la pizzeria Leonardo à Avesnes-sur-Helpe, de nuit" loading="lazy" decoding="async"></span>
+              <span class="projet__meta"><span class="projet__cat">Second œuvre</span><span class="projet__title">Rénovation d’un restaurant</span><span class="projet__place">Avesnes-sur-Helpe</span></span>
+            </a>
+          </li>
+          <li class="projet projet--tall">
+            <a href="/project/maison-containers-martinique/" data-soon>
+              <span class="projet__media"><img src="/assets/img/maison-containers.webp" width="1080" height="663" alt="Terrasse en bois et piscine de la maison containers en Martinique" loading="lazy" decoding="async"></span>
+              <span class="projet__meta"><span class="projet__cat">Gros œuvre</span><span class="projet__title">Maison containers</span><span class="projet__place">Martinique</span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ACCOMPAGNEMENT ===================== -->
+  {{process}}
+
+  <!-- ===================== LE GROUPE ===================== -->
+  <section class="groupe" aria-labelledby="groupe-title">
+    <div class="wrap">
+      <h2 class="section-title groupe__title" id="groupe-title">Plusieurs entreprises, toutes expertes dans leur domaine.</h2>
+      <div class="bento">
+        <a class="cell cell--steel" href="https://steeldream.fr" target="_blank" rel="noopener">
+          <img class="cell__bg" src="/assets/img/svc-chaudronnerie.webp" width="1080" height="663" alt="" loading="lazy" decoding="async">
+          <span class="cell__body">
+            <span class="cell__name" translate="no">Steel Dream</span>
+            <span class="cell__text">Chaudronnerie et structures métalliques sur mesure, fabriquées dans nos ateliers.</span>
+            <span class="cell__ext">steeldream.fr <svg class="ico ico--xs" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+          </span>
+        </a>
+        <div class="cell cell--meyer">
+          <span class="cell__name">Éts Meyer</span>
+          <span class="cell__text">Spécialiste du chauffage et de la plomberie, l’entreprise Meyer a rejoint les Établissements Lemaire en 2022.</span>
+        </div>
+        <a class="cell cell--ramonage" href="https://lacompagnieduramonage.fr" target="_blank" rel="noopener">
+          <span class="cell__photo"><img src="/assets/img/ramonage-camion.webp" width="640" height="488" alt="" loading="lazy" decoding="async"></span>
+          <span class="cell__body">
+            <span class="cell__name">La Compagnie du Ramonage</span>
+            <span class="cell__text">Ramonage et entretien de vos conduits à Fourmies.</span>
+            <span class="cell__ext">lacompagnieduramonage.fr <svg class="ico ico--xs" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></span>
+          </span>
+        </a>
+        <div class="cell cell--recycl">
+          <img class="cell__logo" src="/assets/img/logo-recyclme.webp" width="446" height="148" alt="Recycl’Me" loading="lazy">
+          <span class="cell__text">Le traitement des déchets de nos chantiers, en partenariat avec Flamme et Suez.</span>
+        </div>
+        <div class="cell cell--local">
+          <span class="cell__name">Ancrés à Fourmies</span>
+          <span class="cell__text">Nous recrutons sur le secteur de Fourmies et formons chaque année des apprentis aux métiers du bâtiment.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AVIS ===================== -->
+  <section class="avis" aria-labelledby="avis-title">
+    <div class="wrap avis__grid">
+      <div class="avis__score">
+        <h2 class="sr-only" id="avis-title">Avis clients</h2>
+        <p class="score"><span class="score__value">4,4</span><span class="score__max">/5</span></p>
+        <div class="stars" aria-hidden="true" style="--rating: 4.4">
+          <span class="stars__base"><svg class="ico"><use href="#i-star-fill"/></svg><svg class="ico"><use href="#i-star-fill"/></svg><svg class="ico"><use href="#i-star-fill"/></svg><svg class="ico"><use href="#i-star-fill"/></svg><svg class="ico"><use href="#i-star-fill"/></svg></span>
+          <span class="stars__fill"><svg class="ico"><use href="#i-star-fill"/></svg><svg class="ico"><use href="#i-star-fill"/></svg><svg class="ico"><use href="#i-star-fill"/></svg><svg class="ico"><use href="#i-star-fill"/></svg><svg class="ico"><use href="#i-star-fill"/></svg></span>
+        </div>
+        <p class="avis__count">Note moyenne sur 36 avis Google</p>
+        <a class="link-arrow" href="https://www.google.com/maps?cid=9327641513970355839" target="_blank" rel="noopener">Lire les avis sur Google <svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      </div>
+
+      <div class="quotes" aria-roledescription="carrousel" aria-label="Avis de clients">
+        <div class="quotes__stage" aria-live="polite">
+          <figure class="quote is-active">
+            <blockquote>« Entreprise très compétente&#8239;: suivi sérieux avant, pendant et après les travaux. Le résultat final est impeccable. »</blockquote>
+            <figcaption><strong>Isabelle N.</strong><span>Avis Google</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>« Plusieurs travaux effectués par l’entreprise Lemaire, très satisfait du résultat. Je recommande car le travail est propre et soigné. »</blockquote>
+            <figcaption><strong>Emmanuel M.</strong><span>Avis Google</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>« Équipe sérieuse, professionnelle et efficace. Les travaux ont été réalisés rapidement, avec soin et dans le respect des délais annoncés. »</blockquote>
+            <figcaption><strong>Marie B.</strong><span>Avis Google</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>« Très bon travail réalisé chez moi, isolation, enduit, et de très bonnes équipes à l’écoute et sérieuses. »</blockquote>
+            <figcaption><strong>Ludivine V.</strong><span>Avis Google</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>« Je travaille avec cette entreprise depuis maintenant 5 ans pour la rénovation d’appartements, et je ne peux que la recommander. »</blockquote>
+            <figcaption><strong>Antoine B.</strong><span>Avis Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="quotes__nav">
+          <button class="round-btn" type="button" data-dir="-1"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg><span class="sr-only">Avis précédent</span></button>
+          <p class="quotes__count"><span id="quote-index">1</span> / 5</p>
+          <button class="round-btn" type="button" data-dir="1"><svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg><span class="sr-only">Avis suivant</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  {{contact}}

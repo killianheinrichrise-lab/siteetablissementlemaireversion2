@@ -1,0 +1,14 @@
+# Documents internes (analyse commerciale du prospect) : jamais dans le dépôt public
+audit/
+
+# Téléchargements bruts du site actuel (les images optimisées sont dans site/assets/img)
+_sources/
+
+# Outils locaux
+.claude/
+.playwright-cli/
+__pycache__/
+*.pyc
+.vercel/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="https://etablissementslemaire.fr{{path}}">
+  <meta name="theme-color" content="#EEEFEC">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Établissements Lemaire">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{og_image}}">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
+
+  <link rel="preload" href="/assets/fonts/GeneralSans-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/GeneralSans-400.woff2" as="font" type="font/woff2" crossorigin>
+  {{head}}
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <script>
+    // thème choisi par le visiteur (clair par défaut, choix mémorisé si possible)
+    try { var t = localStorage.getItem('lemaire-theme'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}
+    document.documentElement.classList.add('js');
+  </script>
+  {{jsonld}}
+</head>
+<body class="page-{{page}}">
+{{sprite}}
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+{{header}}
+
+{{menu}}
+
+<main id="contenu">
+{{content}}
+</main>
+
+{{footer}}
+
+{{mobilebar}}
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/lenis.min.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

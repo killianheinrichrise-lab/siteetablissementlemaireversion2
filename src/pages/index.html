@@ -1,0 +1,37 @@
+<!--meta {
+  "page": "accueil",
+  "path": "/",
+  "nav": "home",
+  "title": "Établissements Lemaire | Construction et rénovation à Fourmies",
+  "description": "Les Établissements Lemaire réalisent vos travaux de construction et de rénovation à Fourmies et dans l’Avesnois : gros œuvre, second œuvre, chauffage, sanitaire et chaudronnerie.",
+  "og_image": "/assets/img/boue-apres.webp"
+} -->
+
+<!--slot:head-->
+<link rel="preload" href="/assets/img/hero-bg.webp" as="image" media="(min-width: 901px)" fetchpriority="high">
+<link rel="preload" href="/assets/img/hero-bg-m.webp" as="image" media="(max-width: 900px)" fetchpriority="high">
+<!--/slot-->
+
+<!--slot:jsonld-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Établissements Lemaire",
+  "url": "https://etablissementslemaire.fr/",
+  "logo": "https://etablissementslemaire.fr/assets/img/logo-lemaire.webp",
+  "telephone": "+33649266478",
+  "email": "contact@etablissementslemaire.fr",
+  "address": { "@type": "PostalAddress", "streetAddress": "45 rue Léo Lagrange", "postalCode": "59610", "addressLocality": "Fourmies", "addressRegion": "Hauts-de-France", "addressCountry": "FR" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 50.0177, "longitude": 4.0531 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:30", "closes": "17:00" }
+  ],
+  "areaServed": "Fourmies et l’Avesnois",
+  "sameAs": ["https://www.instagram.com/etablissements.lemaire/", "https://www.facebook.com/etablissements.lemaire"]
+}
+</script>
+<!--/slot-->
+
+{{include:_home_body.html}}

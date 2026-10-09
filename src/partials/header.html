@@ -1,0 +1,35 @@
+<header class="site-header" id="site-header">
+  <a class="brand" href="/">
+    <img class="brand-logo" src="/assets/img/logo-lemaire.webp" width="512" height="152" alt="Établissements Lemaire, accueil">
+  </a>
+
+  <nav class="nav" aria-label="Navigation principale">
+    <ul class="nav-list">
+      <li><a class="pill pill--nav" data-nav="home" href="/">Accueil</a></li>
+      <li><a class="pill pill--nav" data-nav="apropos" href="/a-propos/" data-soon>À propos</a></li>
+      <li><a class="pill pill--nav" data-nav="maison" href="/maison-cle-en-main-a-fourmies/" data-soon>Maison clé en main</a></li>
+      <li class="nav-drop">
+        <button class="pill pill--nav" data-nav="services" type="button" aria-expanded="false" aria-controls="menu-services">
+          Nos services <svg class="ico ico--xs" aria-hidden="true"><use href="#i-caret-down"/></svg>
+        </button>
+        <ul class="nav-drop__panel" id="menu-services">
+          <li><a data-svc="gros-oeuvre" href="/gros-oeuvre/">Gros œuvre</a></li>
+          <li><a data-svc="second-oeuvre" href="/second-oeuvre/">Second œuvre</a></li>
+          <li><a data-svc="chauffage-sanitaire" href="/chauffage-sanitaire/">Chauffage &amp; sanitaire</a></li>
+          <li><a data-svc="chaudronnerie" href="/chaudronnerie-a-fourmies/">Chaudronnerie</a></li>
+        </ul>
+      </li>
+      <li><a class="pill pill--nav" data-nav="realisations" href="/#realisations">Nos réalisations</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-actions">
+    <a class="pill pill--ghost pill--phone" href="tel:+33649266478" aria-label="Appeler le 06 49 26 64 78">
+      <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>06 49 26 64 78</span>
+    </a>
+    <a class="pill pill--solid" href="/contact/" data-soon>Nous contacter</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile">
+      <svg class="ico" aria-hidden="true"><use href="#i-list"/></svg><span class="sr-only">Ouvrir le menu</span>
+    </button>
+  </div>
+</header>
