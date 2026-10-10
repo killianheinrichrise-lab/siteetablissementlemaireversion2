@@ -200,7 +200,8 @@
     };
 
     var layoutHero = function () {
-      var r = scene.getBoundingClientRect();
+      // taille du cadre sans transformation (l'animation d'entrée agrandit la scène de 7 %)
+      var r = { width: heroFrame.clientWidth, height: heroFrame.clientHeight };
       if (!r.width || !r.height) return;
       var a = r.width / r.height;
       var w = IMG_W, h = w / a;
@@ -213,18 +214,26 @@
       if (!letters.length) return;
       var target = Math.min(w * 0.9, 1760);
       fontSize = target / refWidth * 1000;
-      // le haut du « L » ne doit pas toucher les textes placés au-dessus (bandeau desktop, slogan mobile)
+      var baseline = APEX_Y + 0.14 * fontSize;
+      // le haut du « L » ne doit pas toucher les textes placés au-dessus (bandeau desktop, slogan mobile).
+      // Mesure sans les transformations : pendant l'animation d'entrée le slogan est encore décalé
+      // vers le bas, ce qui réduisait le mot à presque rien sur les écrans peu hauts (iPhone).
       var above = 0;
       [$('.hero-statements'), a < 1 ? $('.hero-slogan') : null].forEach(function (el) {
         if (!el || !el.offsetParent) return;
-        above = Math.max(above, el.getBoundingClientRect().bottom - r.top);
+        var bottom = el.offsetHeight;
+        for (var n = el; n && n !== heroFrame; n = n.offsetParent) bottom += n.offsetTop;
+        above = Math.max(above, bottom);
       });
       if (above) {
         var limitY = y0 + (above + 28) * (h / r.height);
-        var maxFs = (APEX_Y - limitY) / (0.718 - 0.14);
-        if (maxFs > 0 && maxFs < fontSize) { fontSize = maxFs; target = fontSize * refWidth / 1000; }
+        if (baseline - 0.718 * fontSize < limitY) {
+          // d'abord enfoncer le mot derrière le pignon (jusqu'à 30 % de sa hauteur), puis seulement le réduire
+          fontSize = Math.max(Math.min(fontSize, (APEX_Y - limitY) / (0.718 - 0.30)), fontSize * 0.45);
+          target = fontSize * refWidth / 1000;
+          baseline = Math.max(APEX_Y + 0.14 * fontSize, Math.min(limitY + 0.718 * fontSize, APEX_Y + 0.30 * fontSize));
+        }
       }
-      var baseline = APEX_Y + 0.14 * fontSize;
       var startX = x0 + (w - target) / 2;
       letters.forEach(function (el, i) {
         el.setAttribute('x', (startX + offsets[i] * fontSize / 1000).toFixed(1));
@@ -276,6 +285,8 @@
       };
       if ('ResizeObserver' in window) new ResizeObserver(onResize).observe(heroFrame);
       else window.addEventListener('resize', onResize);
+      // si la police arrive après le délai de 1,5 s, la hauteur du slogan change : on recale le mot
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(onResize);
     };
 
     var fontReady = document.fonts && document.fonts.load ? document.fonts.load('500 100px "General Sans"') : Promise.resolve();
